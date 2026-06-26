@@ -196,7 +196,7 @@
   .ct-row a:hover{color:var(--accent)}
   .foot{margin-top:90px; padding-top:26px; border-top:1px solid var(--line); display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; font-family:"IBM Plex Mono",monospace; font-size:11.5px; color:var(--muted)}
 
-  [data-lang="en"] .ru,[data-lang="ru"] .en{display:none}
+  [data-lang="en"] .ru,[data-lang="en"] .de,[data-lang="ru"] .en,[data-lang="ru"] .de,[data-lang="de"] .en,[data-lang="de"] .ru{display:none}
 
   @media(prefers-reduced-motion:reduce){
     *{animation:none!important; transition:none!important}
@@ -221,6 +221,7 @@
       <div class="lang">
         <button data-set="en" class="on">EN</button>
         <button data-set="ru">RU</button>
+        <button data-set="de">DE</button>
       </div>
     </div>
   </div>
@@ -254,6 +255,7 @@
       <p class="about-lead reveal">
         <span class="en">A <b>builder &amp; problem-solver</b> who trusts data over opinions — turning ambiguous problems into structured decisions and measurable impact. Product, strategy, and a marketplace built from zero.</span>
         <span class="ru">Я <b>создаю продукты и решаю задачи</b>, опираясь на данные, а не мнения — превращаю неоднозначные проблемы в структурные решения и измеримый результат. Продукт, стратегия и маркетплейс с нуля.</span>
+        <span class="de">Ein <b>Macher &amp; Problemlöser</b>, der Daten über Meinungen stellt — und mehrdeutige Probleme in strukturierte Entscheidungen und messbare Wirkung verwandelt. Produkt, Strategie und ein Marktplatz von Grund auf.</span>
       </p>
       <div class="about-body reveal" data-d="1">
         <p class="en">At <b style="color:var(--ink)">Tinkoff</b> I ran controlled experiments on credit-card flows. At <b style="color:var(--ink)">Title.</b> I took an AI university platform from concept to launch. As founder of <b style="color:var(--ink)">Logora</b>, I built a creator-monetization marketplace end to end.</p>
@@ -262,6 +264,9 @@
         <p class="ru">В <b style="color:var(--ink)">Tinkoff</b> я вёл контролируемые эксперименты на флоу кредитных карт. В <b style="color:var(--ink)">Title.</b> довёл AI-платформу для вузов от концепции до запуска. Как основатель <b style="color:var(--ink)">Logora</b> построил маркетплейс для монетизации криейторов от и до.</p>
         <p class="ru">Выпускник ФКН ВШЭ (Computer Science), сейчас магистратура в <b style="color:var(--ink)">TU Munich</b> (Data in Society) и ВШЭ (AI).</p>
         <p class="ru">Сейчас фокус: <b style="color:var(--ink)">цифровая трансформация и AI-governance</b> (EU AI Act, политика данных) — соединяю инженерию, бизнес и стратегию, в продукте или консалтинге.</p>
+        <p class="de">Bei <b style="color:var(--ink)">Tinkoff</b> habe ich kontrollierte Experimente an Kreditkarten-Flows durchgeführt. Bei <b style="color:var(--ink)">Title.</b> habe ich eine KI-Universitätsplattform von der Idee bis zum Launch gebracht. Als Gründer von <b style="color:var(--ink)">Logora</b> habe ich einen Marktplatz zur Creator-Monetarisierung von A bis Z aufgebaut.</p>
+        <p class="de">Informatik-Absolvent der HSE, derzeit M.Sc. an der <b style="color:var(--ink)">TU München</b> (Data in Society) und HSE (KI).</p>
+        <p class="de">Mein Fokus jetzt: <b style="color:var(--ink)">digitale Transformation und KI-Governance</b> (EU AI Act, Datenpolitik) — an der Schnittstelle von Technik, Business und Strategie, ob im Produkt oder in der Beratung.</p>
       </div>
     </div>
     <div class="stats reveal" data-d="2" id="stats"></div>
@@ -331,72 +336,85 @@ const I18N={
     hero_kicker:"Продукт · Стратегия · Фаундер",hero_tag:"Строю продукты на данных — и решаю задачи на стыке технологий, бизнеса и политики.",
     hero_loc:"Мюнхен, Германия",hero_avail:"Открыт к предложениям",cta_email:"Связаться",cta_cv:"Скачать CV",
     path_ttl:"Пройденный путь",road_ttl:"Планы вперёд",skills_ttl:"Навыки и инструменты",ach_ttl:"Достижения",
-    ct_lead:"Давайте сделаем",ct_lead2:"что-то",ct_real:"стоящее.",ct_cveu:"CV (Европа)",ct_cvus:"CV (США, 1 стр.)",foot_built:"Сделано с заботой · Мюнхен"}
+    ct_lead:"Давайте сделаем",ct_lead2:"что-то",ct_real:"стоящее.",ct_cveu:"CV (Европа)",ct_cvus:"CV (США, 1 стр.)",foot_built:"Сделано с заботой · Мюнхен"},
+  de:{nav_about:"Über mich",nav_exp:"Erfahrung",nav_path:"Werdegang",nav_proj:"Projekte",nav_road:"Ausblick",nav_contact:"Kontakt",
+    hero_kicker:"Produkt · Strategie · Gründer",hero_tag:"Ich baue datengetriebene Produkte — und löse Probleme an der Schnittstelle von Technologie, Business und Politik.",
+    hero_loc:"München, Deutschland",hero_avail:"Offen für Möglichkeiten",cta_email:"Kontakt aufnehmen",cta_cv:"CV herunterladen",
+    path_ttl:"Mein Werdegang",road_ttl:"Ausblick",skills_ttl:"Skills & Tools",ach_ttl:"Erfolge",
+    ct_lead:"Lass uns etwas",ct_lead2:"Sinnvolles",ct_real:"bauen.",ct_cveu:"CV (Europa)",ct_cvus:"CV (USA, 1 Seite)",foot_built:"Mit Sorgfalt gebaut · München"}
 };
 const STATS=[
-  {v:8,suf:" p.p.",pre:"+",l:{en:"conversion lift via A/B · Tinkoff",ru:"конверсия через A/B · Tinkoff"}},
-  {v:8000,suf:"/mo",pre:"+",l:{en:"card utilizations added · Tinkoff",ru:"утилизаций карт в мес · Tinkoff"}},
-  {v:40,suf:"%",pre:"−",l:{en:"operational costs cut · Title.",ru:"операционных затрат · Title."}},
-  {v:100,suf:"+",pre:"",l:{en:"creators on Logora waitlist",ru:"криейторов в вейтлисте Logora"}}
+  {v:8,suf:" p.p.",pre:"+",l:{en:"conversion lift via A/B · Tinkoff",ru:"конверсия через A/B · Tinkoff",de:"Konversionsanstieg via A/B · Tinkoff"}},
+  {v:8000,suf:"/mo",pre:"+",l:{en:"card utilizations added · Tinkoff",ru:"утилизаций карт в мес · Tinkoff",de:"Kartennutzungen hinzugefügt · Tinkoff"}},
+  {v:40,suf:"%",pre:"−",l:{en:"operational costs cut · Title.",ru:"операционных затрат · Title.",de:"geringere Betriebskosten · Title."}},
+  {v:100,suf:"+",pre:"",l:{en:"creators on Logora waitlist",ru:"криейторов в вейтлисте Logora",de:"Creator auf der Logora-Warteliste"}}
 ];
 const XP=[
-  {co:"Tinkoff",tag:"FinTech",role:{en:"Middle Technical Product Manager",ru:"Middle Technical Product Manager"},date:{en:"Oct 2025 — Feb 2026",ru:"Окт 2025 — Фев 2026"},
+  {co:"Tinkoff",tag:"FinTech",role:{en:"Middle Technical Product Manager",ru:"Middle Technical Product Manager",de:"Technical Product Manager"},date:{en:"Oct 2025 — Feb 2026",ru:"Окт 2025 — Фев 2026",de:"Okt. 2025 — Feb. 2026"},
    b:{en:["Redesigned a credit-card notification flow via controlled A/B experiments → *+8 p.p. conversion* (+12%/mo)","Led rollout of paperless document-signing for N2B clients across CX, legal & engineering","Designed virtual-card issuance logic (push/call flows) → *+8,000 utilizations/mo*","Recovered ~1,200 monthly utilizations by spotting a funnel issue in dashboards"],
-       ru:["Редизайн флоу уведомлений по кредитке через A/B-эксперименты → *+8 п.п. конверсии* (+12%/мес)","Запуск безбумажного подписания документов для N2B-клиентов: CX, юристы, разработка","Спроектировал логику выпуска виртуальных карт (push/call) → *+8 000 утилизаций/мес*","Вернул ~1 200 утилизаций в месяц, найдя проблему в воронке по дашбордам"]}},
-  {co:"Title.",tag:"EdTech · AI",role:{en:"Product Manager / Business Analyst",ru:"Product Manager / Бизнес-аналитик"},date:{en:"Aug 2024 — Sep 2025",ru:"Авг 2024 — Сен 2025"},
+       ru:["Редизайн флоу уведомлений по кредитке через A/B-эксперименты → *+8 п.п. конверсии* (+12%/мес)","Запуск безбумажного подписания документов для N2B-клиентов: CX, юристы, разработка","Спроектировал логику выпуска виртуальных карт (push/call) → *+8 000 утилизаций/мес*","Вернул ~1 200 утилизаций в месяц, найдя проблему в воронке по дашбордам"],
+       de:["Kreditkarten-Benachrichtigungs-Flow durch kontrollierte A/B-Experimente neu gestaltet → *+8 Pp. Konversion* (+12%/Mt)","Einführung des papierlosen Dokumentensignierens für N2B-Kunden geleitet: CX, Recht & Entwicklung","Logik zur Ausgabe virtueller Karten entworfen (Push/Call) → *+8.000 Nutzungen/Mt*","~1.200 monatliche Nutzungen zurückgewonnen durch Aufdecken eines Funnel-Problems in Dashboards"]}},
+  {co:"Title.",tag:"EdTech · AI",role:{en:"Product Manager / Business Analyst",ru:"Product Manager / Бизнес-аналитик",de:"Product Manager / Business Analyst"},date:{en:"Aug 2024 — Sep 2025",ru:"Авг 2024 — Сен 2025",de:"Aug. 2024 — Sep. 2025"},
    b:{en:["Led an AI university platform from concept to MVP in *4 months* with a team of 10","Automated academic workflows → *~40% reduction in operational costs*","Key project: *AI Lingua* — NLP English-proficiency assessment for HSE, featured in TASS","Drove product to B2B negotiations; nominated for an industry innovation award"],
-       ru:["Возглавил AI-платформу для вузов: от концепции до MVP за *4 месяца*, команда 10 человек","Автоматизировал академические процессы → *~40% сокращение операционных затрат*","Ключевой проект: *AI Lingua* — NLP-оценка английского для ВШЭ, упомянута в ТАСС","Довёл продукт до B2B-переговоров; номинация на отраслевую премию за инновации"]}},
-  {co:"Logora",tag:"Founder · Marketplace",role:{en:"Founder & Growth Product Manager",ru:"Основатель & Growth PM"},date:{en:"Apr 2024 — Apr 2026",ru:"Апр 2024 — Апр 2026"},
+       ru:["Возглавил AI-платформу для вузов: от концепции до MVP за *4 месяца*, команда 10 человек","Автоматизировал академические процессы → *~40% сокращение операционных затрат*","Ключевой проект: *AI Lingua* — NLP-оценка английского для ВШЭ, упомянута в ТАСС","Довёл продукт до B2B-переговоров; номинация на отраслевую премию за инновации"],
+       de:["KI-Universitätsplattform von der Idee bis zum MVP in *4 Monaten* mit einem 10-köpfigen Team geführt","Akademische Prozesse automatisiert → *~40% geringere Betriebskosten*","Schlüsselprojekt: *AI Lingua* — KI-Bewertung von Englischkenntnissen für die HSE, in TASS erwähnt","Produkt bis zu B2B-Verhandlungen gebracht; für einen Innovationspreis nominiert"]}},
+  {co:"Logora",tag:"Founder · Marketplace",role:{en:"Founder & Growth Product Manager",ru:"Основатель & Growth PM",de:"Gründer & Growth Product Manager"},date:{en:"Apr 2024 — Apr 2026",ru:"Апр 2024 — Апр 2026",de:"Apr. 2024 — Apr. 2026"},
    b:{en:["Built a creator-monetization marketplace (sessions, booking, payments, payouts) from *0 → 1*","Grew a pre-launch waitlist to *100+ creators* through outreach & user interviews","Finalist, \"Best Entrepreneurial Project\" — HSE FCS Young Entrepreneur Scholarship 2025","Ran B2B talks with universities, advancing pilot integration agreements"],
-       ru:["Построил маркетплейс для монетизации криейторов (сессии, бронь, платежи, выплаты) с *0 → 1*","Собрал вейтлист *100+ криейторов* через аутрич и интервью с пользователями","Финалист «Лучший предпринимательский проект» — Стипендия молодого предпринимателя ФКН ВШЭ 2025","Вёл B2B-переговоры с вузами, продвигал пилотные интеграции"]}},
-  {co:"HSE",tag:"Academia",role:{en:"Research Assistant — Data Analysis",ru:"Учебный ассистент — Анализ данных"},date:{en:"Sep 2024 — Jan 2025",ru:"Сен 2024 — Янв 2025"},
+       ru:["Построил маркетплейс для монетизации криейторов (сессии, бронь, платежи, выплаты) с *0 → 1*","Собрал вейтлист *100+ криейторов* через аутрич и интервью с пользователями","Финалист «Лучший предпринимательский проект» — Стипендия молодого предпринимателя ФКН ВШЭ 2025","Вёл B2B-переговоры с вузами, продвигал пилотные интеграции"],
+       de:["Einen Marktplatz zur Creator-Monetarisierung (Sessions, Buchung, Zahlungen, Auszahlungen) von *0 → 1* aufgebaut","Vorab-Warteliste auf *100+ Creator* ausgebaut durch Outreach & Nutzerinterviews","Finalist, „Best Entrepreneurial Project“ — HSE FCS Young Entrepreneur Scholarship 2025","B2B-Gespräche mit Universitäten geführt, Pilot-Integrationen vorangetrieben"]}},
+  {co:"HSE",tag:"Academia",role:{en:"Research Assistant — Data Analysis",ru:"Учебный ассистент — Анализ данных",de:"Studentischer Assistent — Datenanalyse"},date:{en:"Sep 2024 — Jan 2025",ru:"Сен 2024 — Янв 2025",de:"Sep. 2024 — Jan. 2025"},
    b:{en:["Supported students in mathematical methods of data analysis in Python","Ran individual & group consultations; evaluated progress with structured feedback"],
-       ru:["Помогал студентам с математическими методами анализа данных на Python","Вёл индивидуальные и групповые консультации; оценивал прогресс с обратной связью"]}},
-  {co:"HSE Student Council",tag:"Leadership",role:{en:"Deputy Head — External Communications",ru:"Зам. руководителя — Внешние коммуникации"},date:{en:"2021 — 2022",ru:"2021 — 2022"},
+       ru:["Помогал студентам с математическими методами анализа данных на Python","Вёл индивидуальные и групповые консультации; оценивал прогресс с обратной связью"],
+       de:["Studierende bei mathematischen Methoden der Datenanalyse in Python unterstützt","Einzel- & Gruppenberatungen geführt; Fortschritt mit strukturiertem Feedback bewertet"]}},
+  {co:"HSE Student Council",tag:"Leadership",role:{en:"Deputy Head — External Communications",ru:"Зам. руководителя — Внешние коммуникации",de:"Stellv. Leiter — Externe Kommunikation"},date:{en:"2021 — 2022",ru:"2021 — 2022",de:"2021 — 2022"},
    b:{en:["Led project teams in external communications","Secured *investment & sponsorship* for student initiatives","Launched an *international partnership program* with a Chinese university","Acted as curator — mentored and onboarded students"],
-       ru:["Руководил проектными командами по внешним коммуникациям","Привлёк *инвестиции и спонсорство* для студенческих инициатив","Запустил *международную партнёрскую программу* с китайским университетом","Был куратором — менторил и адаптировал студентов"]}},
-  {co:"Tinkoff",tag:"FinTech",role:{en:"Business / Data Analyst",ru:"Бизнес / Дата-аналитик"},date:{en:"May 2024 — Aug 2024",ru:"Май 2024 — Авг 2024"},
+       ru:["Руководил проектными командами по внешним коммуникациям","Привлёк *инвестиции и спонсорство* для студенческих инициатив","Запустил *международную партнёрскую программу* с китайским университетом","Был куратором — менторил и адаптировал студентов"],
+       de:["Projektteams in der externen Kommunikation geleitet","*Investitionen & Sponsoring* für studentische Initiativen gesichert","Ein *internationales Partnerschaftsprogramm* mit einer chinesischen Universität gestartet","Als Tutor tätig — Studierende betreut und eingearbeitet"]}},
+  {co:"Tinkoff",tag:"FinTech",role:{en:"Business / Data Analyst",ru:"Бизнес / Дата-аналитик",de:"Business / Data Analyst"},date:{en:"May 2024 — Aug 2024",ru:"Май 2024 — Авг 2024",de:"Mai 2024 — Aug. 2024"},
    b:{en:["Ran A/B tests and metrics analysis on product features","Developed a card-delivery strategy under lockdown constraints"],
-       ru:["Проводил A/B-тесты и анализ метрик по фичам продукта","Разработал стратегию доставки карт в условиях локдауна"]}},
-  {co:"NLMK Group",tag:"Data Science",role:{en:"Intern Data Scientist / Business Analyst",ru:"Стажёр Data Scientist / Аналитик"},date:{en:"Jan 2024 — Apr 2024",ru:"Янв 2024 — Апр 2024"},
+       ru:["Проводил A/B-тесты и анализ метрик по фичам продукта","Разработал стратегию доставки карт в условиях локдауна"],
+       de:["A/B-Tests und Metrik-Analysen für Produktfeatures durchgeführt","Strategie zur Kartenzustellung unter Lockdown-Bedingungen entwickelt"]}},
+  {co:"NLMK Group",tag:"Data Science",role:{en:"Intern Data Scientist / Business Analyst",ru:"Стажёр Data Scientist / Аналитик",de:"Praktikant Data Scientist / Business Analyst"},date:{en:"Jan 2024 — Apr 2024",ru:"Янв 2024 — Апр 2024",de:"Jan. 2024 — Apr. 2024"},
    b:{en:["Built an ensemble ML model for ore-content estimation","Processed industrial data with Python (pandas, NumPy); fixed data leaks"],
-       ru:["Построил ансамблевую ML-модель для оценки содержания руды","Обрабатывал промышленные данные на Python (pandas, NumPy); чинил утечки данных"]}},
-  {co:"Apelsin",tag:"iOS",role:{en:"Junior iOS Developer",ru:"Junior iOS-разработчик"},date:{en:"Jun 2023 — Aug 2023",ru:"Июн 2023 — Авг 2023"},
+       ru:["Построил ансамблевую ML-модель для оценки содержания руды","Обрабатывал промышленные данные на Python (pandas, NumPy); чинил утечки данных"],
+       de:["Ensemble-ML-Modell zur Schätzung des Erzgehalts gebaut","Industriedaten mit Python (pandas, NumPy) verarbeitet; Data Leaks behoben"]}},
+  {co:"Apelsin",tag:"iOS",role:{en:"Junior iOS Developer",ru:"Junior iOS-разработчик",de:"Junior iOS-Entwickler"},date:{en:"Jun 2023 — Aug 2023",ru:"Июн 2023 — Авг 2023",de:"Jun. 2023 — Aug. 2023"},
    b:{en:["Built an iOS smart-home app (door lock, elevator, barrier)","Developed an account & access synchronization module"],
-       ru:["Разработал iOS-приложение для умного дома (замок, лифт, шлагбаум)","Сделал модуль синхронизации аккаунтов и доступов"]}}
+       ru:["Разработал iOS-приложение для умного дома (замок, лифт, шлагбаум)","Сделал модуль синхронизации аккаунтов и доступов"],
+       de:["iOS-Smart-Home-App gebaut (Türschloss, Aufzug, Schranke)","Modul zur Konto- & Zugriffssynchronisierung entwickelt"]}}
 ];
 const TL=[
-  {year:"2023",co:"Apelsin",d:{en:"First step — iOS development",ru:"Первый шаг — iOS-разработка"}},
-  {year:"2024",co:"NLMK → Tinkoff",d:{en:"Into data: ML models & A/B testing",ru:"В данные: ML-модели и A/B-тесты"}},
-  {year:"2024",co:"Title. + Logora",d:{en:"Becoming a PM — and founding my own marketplace",ru:"Становлюсь продактом — и основываю свой маркетплейс"}},
-  {year:"2025",co:"Tinkoff — Technical PM",d:{en:"Product at scale: experiments on credit-card flows",ru:"Продукт на масштабе: эксперименты на флоу кредиток"}},
-  {year:"2026",co:"TU Munich",d:{en:"MSc Data in Society — relocation to Germany",ru:"MSc Data in Society — переезд в Германию"}}
+  {year:"2023",co:"Apelsin",d:{en:"First step — iOS development",ru:"Первый шаг — iOS-разработка",de:"Erster Schritt — iOS-Entwicklung"}},
+  {year:"2024",co:"NLMK → Tinkoff",d:{en:"Into data: ML models & A/B testing",ru:"В данные: ML-модели и A/B-тесты",de:"Rein in die Daten: ML-Modelle & A/B-Tests"}},
+  {year:"2024",co:"Title. + Logora",d:{en:"Becoming a PM — and founding my own marketplace",ru:"Становлюсь продактом — и основываю свой маркетплейс",de:"PM werden — und einen eigenen Marktplatz gründen"}},
+  {year:"2025",co:"Tinkoff — Technical PM",d:{en:"Product at scale: experiments on credit-card flows",ru:"Продукт на масштабе: эксперименты на флоу кредиток",de:"Produkt im großen Maßstab: Experimente an Kreditkarten-Flows"}},
+  {year:"2026",co:"TU Munich",d:{en:"MSc Data in Society — relocation to Germany",ru:"MSc Data in Society — переезд в Германию",de:"M.Sc. Data in Society — Umzug nach Deutschland"}}
 ];
 const PROJ=[
-  {n:"Logora",badge:{en:"Marketplace · Founder",ru:"Маркетплейс · Фаундер"},d:{en:"Creator-monetization platform — paid sessions, booking, payments and payouts. Built 0→1, 100+ waitlist, HSE finalist 2025.",ru:"Платформа монетизации криейторов — платные сессии, бронь, платежи и выплаты. Построена с 0→1, 100+ вейтлист, финалист ВШЭ 2025."},stack:["Vue.js","Django","Python"],link:null},
-  {n:"AI Lingua",badge:{en:"NLP · In TASS",ru:"NLP · В ТАСС"},d:{en:"NLP system for automated English-proficiency assessment, built at Title. for HSE. Evaluates writing & speech; featured in TASS (2024).",ru:"NLP-система автоматической оценки уровня английского, сделана в Title. для ВШЭ. Оценивает письмо и речь; упомянута в ТАСС (2024)."},stack:["NLP","Product","Analytics"],link:"https://tass.ru/obschestvo/22004259",linkt:{en:"Read in TASS",ru:"Читать в ТАСС"}},
-  {n:"Vocab Cards",badge:{en:"Pet · AI",ru:"Pet · AI"},d:{en:"Turns handwritten vocabulary photos into structured flashcards via Claude API — straight into Obsidian and Anki.",ru:"Превращает фото рукописных слов в структурированные карточки через Claude API — прямо в Obsidian и Anki."},stack:["Python","Claude API","Obsidian"],link:null},
-  {n:"YouTube",badge:{en:"Content",ru:"Контент"},d:{en:"A channel on building products, careers in tech, and the founder path — honest, with real numbers, no hype.",ru:"Канал о том, как строю продукты, о карьере в IT и пути фаундера — честно, с цифрами, без инфоцыганства."},stack:["Product","Career","Founder"],link:null}
+  {n:"Logora",badge:{en:"Marketplace · Founder",ru:"Маркетплейс · Фаундер",de:"Marktplatz · Gründer"},d:{en:"Creator-monetization platform — paid sessions, booking, payments and payouts. Built 0→1, 100+ waitlist, HSE finalist 2025.",ru:"Платформа монетизации криейторов — платные сессии, бронь, платежи и выплаты. Построена с 0→1, 100+ вейтлист, финалист ВШЭ 2025.",de:"Plattform zur Creator-Monetarisierung — bezahlte Sessions, Buchung, Zahlungen und Auszahlungen. Von 0→1 aufgebaut, 100+ Warteliste, HSE-Finalist 2025."},stack:["Vue.js","Django","Python"],link:null},
+  {n:"AI Lingua",badge:{en:"NLP · In TASS",ru:"NLP · В ТАСС",de:"NLP · In TASS"},d:{en:"NLP system for automated English-proficiency assessment, built at Title. for HSE. Evaluates writing & speech; featured in TASS (2024).",ru:"NLP-система автоматической оценки уровня английского, сделана в Title. для ВШЭ. Оценивает письмо и речь; упомянута в ТАСС (2024).",de:"NLP-System zur automatischen Bewertung von Englischkenntnissen, bei Title. für die HSE gebaut. Bewertet Schrift & Sprache; in TASS erwähnt (2024)."},stack:["NLP","Product","Analytics"],link:"https://tass.ru/obschestvo/22004259",linkt:{en:"Read in TASS",ru:"Читать в ТАСС",de:"In TASS lesen"}},
+  {n:"Vocab Cards",badge:{en:"Pet · AI",ru:"Pet · AI",de:"Pet · KI"},d:{en:"Turns handwritten vocabulary photos into structured flashcards via Claude API — straight into Obsidian and Anki.",ru:"Превращает фото рукописных слов в структурированные карточки через Claude API — прямо в Obsidian и Anki.",de:"Verwandelt Fotos handgeschriebener Vokabeln via Claude API in strukturierte Karteikarten — direkt in Obsidian und Anki."},stack:["Python","Claude API","Obsidian"],link:null},
+  {n:"YouTube",badge:{en:"Content",ru:"Контент",de:"Content"},d:{en:"A channel on building products, careers in tech, and the founder path — honest, with real numbers, no hype.",ru:"Канал о том, как строю продукты, о карьере в IT и пути фаундера — честно, с цифрами, без инфоцыганства.",de:"Ein Kanal über Produktentwicklung, Karriere in Tech und den Gründerweg — ehrlich, mit echten Zahlen, ohne Hype."},stack:["Product","Career","Founder"],link:null}
 ];
 const RM=[
-  {when:{en:"Now · 2026",ru:"Сейчас · 2026"},now:true,t:{en:"Logora & Audience",ru:"Logora и аудитория"},l:{en:["First paying users & B2B pilots","Launch YouTube consistently","First paid consultations"],ru:["Первые платящие и B2B-пилоты","Регулярный запуск YouTube","Первые платные консультации"]}},
-  {when:{en:"2027",ru:"2027"},now:false,t:{en:"Depth",ru:"Глубина"},l:{en:["Complete HSE MSc (AI)","Scale Logora partnerships","Grow recurring revenue"],ru:["Закончить магистратуру ВШЭ (AI)","Масштабировать партнёрства Logora","Растить регулярную выручку"]}},
-  {when:{en:"2028",ru:"2028"},now:false,t:{en:"Munich",ru:"Мюнхен"},l:{en:["Complete TU Munich MSc","Product or strategy role in EU tech / consulting","Bridge product, strategy & policy"],ru:["Закончить магистратуру TU Munich","Продукт или стратегия в EU tech / консалтинге","Соединять продукт, стратегию и политику"]}},
-  {when:{en:"Beyond",ru:"Дальше"},now:false,t:{en:"The Big Bet",ru:"Большая ставка"},l:{en:["Build at AI × data × society","Lead products that matter","Mentor & invest"],ru:["Строить на стыке AI × данные × общество","Вести продукты, которые важны","Менторить и инвестировать"]}}
+  {when:{en:"Now · 2026",ru:"Сейчас · 2026",de:"Jetzt · 2026"},now:true,t:{en:"Logora & Audience",ru:"Logora и аудитория",de:"Logora & Publikum"},l:{en:["First paying users & B2B pilots","Launch YouTube consistently","First paid consultations"],ru:["Первые платящие и B2B-пилоты","Регулярный запуск YouTube","Первые платные консультации"],de:["Erste zahlende Nutzer & B2B-Pilotprojekte","YouTube konsequent starten","Erste bezahlte Beratungen"]}},
+  {when:{en:"2027",ru:"2027",de:"2027"},now:false,t:{en:"Depth",ru:"Глубина",de:"Tiefe"},l:{en:["Complete HSE MSc (AI)","Scale Logora partnerships","Grow recurring revenue"],ru:["Закончить магистратуру ВШЭ (AI)","Масштабировать партнёрства Logora","Растить регулярную выручку"],de:["HSE-Master (KI) abschließen","Logora-Partnerschaften skalieren","Wiederkehrenden Umsatz ausbauen"]}},
+  {when:{en:"2028",ru:"2028",de:"2028"},now:false,t:{en:"Munich",ru:"Мюнхен",de:"München"},l:{en:["Complete TU Munich MSc","Product or strategy role in EU tech / consulting","Bridge product, strategy & policy"],ru:["Закончить магистратуру TU Munich","Продукт или стратегия в EU tech / консалтинге","Соединять продукт, стратегию и политику"],de:["TU-München-Master abschließen","Produkt- oder Strategierolle in EU-Tech / Beratung","Produkt, Strategie & Politik verbinden"]}},
+  {when:{en:"Beyond",ru:"Дальше",de:"Danach"},now:false,t:{en:"The Big Bet",ru:"Большая ставка",de:"Die große Wette"},l:{en:["Build at AI × data × society","Lead products that matter","Mentor & invest"],ru:["Строить на стыке AI × данные × общество","Вести продукты, которые важны","Менторить и инвестировать"],de:["An KI × Daten × Gesellschaft bauen","Produkte mit Bedeutung führen","Mentoring & Investieren"]}}
 ];
 const SK=[
-  {cat:{en:"Product",ru:"Продукт"},tags:["A/B Testing","Product Analytics","Backlog / Jira","User Story Mapping","Confluence","Discovery","Cross-functional"]},
-  {cat:{en:"Strategy & Policy",ru:"Стратегия и политика"},tags:["Structured Problem-Solving","Product Strategy","Stakeholder Management","Go-to-Market","AI Governance","EU AI Act","Data Governance"]},
-  {cat:{en:"Data",ru:"Данные"},tags:["Python","pandas","NumPy","Machine Learning","Deep Learning (research)","SQL","Metrics"]},
-  {cat:{en:"Engineering",ru:"Разработка"},tags:["Django","Vue.js","Git","REST","iOS / Swift"]},
-  {cat:{en:"Languages",ru:"Языки"},tags:["Russian — native","English — fluent","German — B1","Spanish — basic"]},
-  {cat:{en:"Beyond Work",ru:"Вне работы"},tags:["Mentoring & tutoring","Volunteering — Preodolenie","Social inclusion","Athlete — ranked"]}
+  {cat:{en:"Product",ru:"Продукт",de:"Produkt"},tags:["A/B Testing","Product Analytics","Backlog / Jira","User Story Mapping","Confluence","Discovery","Cross-functional"]},
+  {cat:{en:"Strategy & Policy",ru:"Стратегия и политика",de:"Strategie & Politik"},tags:["Structured Problem-Solving","Product Strategy","Stakeholder Management","Go-to-Market","AI Governance","EU AI Act","Data Governance"]},
+  {cat:{en:"Data",ru:"Данные",de:"Daten"},tags:["Python","pandas","NumPy","Machine Learning","Deep Learning (research)","SQL","Metrics"]},
+  {cat:{en:"Engineering",ru:"Разработка",de:"Entwicklung"},tags:["Django","Vue.js","Git","REST","iOS / Swift"]},
+  {cat:{en:"Languages",ru:"Языки",de:"Sprachen"},tags:["Russian — native","English — fluent","German — B1","Spanish — basic"]},
+  {cat:{en:"Beyond Work",ru:"Вне работы",de:"Außerhalb der Arbeit"},tags:["Mentoring & tutoring","Volunteering — Preodolenie","Social inclusion","Athlete — ranked"]}
 ];
 const ACH=[
-  {y:"2026",t:{en:"*Finalist* — VoronaCreativeTech Accelerator, HSE Faculty of Creative Industries (Logora)",ru:"*Финалист* — Акселератор ВоронаCreativeTech, ФКИ НИУ ВШЭ (Logora)"},cert:"assets/cert-accelerator.jpg"},
-  {y:"2025",t:{en:"*Finalist* — \"Best Entrepreneurial Project\", HSE FCS Young Entrepreneur Scholarship (Logora)",ru:"*Финалист* — «Лучший предпринимательский проект», Стипендия молодого предпринимателя ФКН ВШЭ (Logora)"},cert:"assets/cert-finalist.jpg"},
-  {y:"2025",t:{en:"*Participant* — IV HSE FCS Summer School on Entrepreneurship (MTS × HSE), Track \"Project\"",ru:"*Участник* — IV Летняя школа ФКН ВШЭ по предпринимательству (МТС × ВШЭ), трек «Проект»"},cert:"assets/cert-summer.jpg"},
-  {y:"2024",t:{en:"*AI Lingua* featured in TASS — NLP English-assessment system built for HSE",ru:"*AI Lingua* в ТАСС — NLP-система оценки английского, сделанная для ВШЭ"},cert:null,link:"https://tass.ru/obschestvo/22004259"}
+  {y:"2026",t:{en:"*Finalist* — VoronaCreativeTech Accelerator, HSE Faculty of Creative Industries (Logora)",ru:"*Финалист* — Акселератор ВоронаCreativeTech, ФКИ НИУ ВШЭ (Logora)",de:"*Finalist* — VoronaCreativeTech Accelerator, HSE-Fakultät für Kreativindustrien (Logora)"},cert:"assets/cert-accelerator.jpg"},
+  {y:"2025",t:{en:"*Finalist* — \"Best Entrepreneurial Project\", HSE FCS Young Entrepreneur Scholarship (Logora)",ru:"*Финалист* — «Лучший предпринимательский проект», Стипендия молодого предпринимателя ФКН ВШЭ (Logora)",de:"*Finalist* — „Best Entrepreneurial Project“, HSE FCS Young Entrepreneur Scholarship (Logora)"},cert:"assets/cert-finalist.jpg"},
+  {y:"2025",t:{en:"*Participant* — IV HSE FCS Summer School on Entrepreneurship (MTS × HSE), Track \"Project\"",ru:"*Участник* — IV Летняя школа ФКН ВШЭ по предпринимательству (МТС × ВШЭ), трек «Проект»",de:"*Teilnehmer* — IV. HSE-FCS-Sommerschule für Entrepreneurship (MTS × HSE), Track „Projekt“"},cert:"assets/cert-summer.jpg"},
+  {y:"2024",t:{en:"*AI Lingua* featured in TASS — NLP English-assessment system built for HSE",ru:"*AI Lingua* в ТАСС — NLP-система оценки английского, сделанная для ВШЭ",de:"*AI Lingua* in TASS erwähnt — NLP-System zur Englisch-Bewertung, für die HSE gebaut"},cert:null,link:"https://tass.ru/obschestvo/22004259"}
 ];
 
 let lang=localStorage.getItem("lang")||"en";
