@@ -7,7 +7,7 @@
 <meta name="description" content="Maxim Troitskiy — Product Manager & Founder working at the intersection of product, digital/AI strategy and policy. Data-driven impact across FinTech, EdTech and the creator economy.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
     --bg:#f4f1ea; --ink:#1a1611; --accent:#d6452f; --accent-deep:#b8371f;
@@ -40,7 +40,7 @@
   .nav.scrolled{border-color:var(--line)}
   .nav-in{max-width:var(--maxw); margin:0 auto; padding:16px 32px; display:flex; align-items:center; justify-content:space-between}
   @media(max-width:640px){.nav-in{padding:14px 20px}}
-  .brand{font-family:"Fraunces",serif; font-weight:600; font-size:20px; letter-spacing:-.01em}
+  .brand{font-family:"Source Serif 4",Georgia,serif; font-weight:600; font-size:20px; letter-spacing:-.01em}
   .brand .dot{color:var(--accent)}
   .nav-links{display:flex; gap:28px; align-items:center}
   .nav-links a{font-family:"IBM Plex Mono",monospace; font-size:12px; letter-spacing:.03em; text-transform:uppercase; color:var(--muted); position:relative; transition:color .25s}
@@ -70,9 +70,9 @@
   /* HERO */
   #hero{min-height:100vh; display:flex; flex-direction:column; justify-content:center; padding-top:90px; padding-bottom:0}
   .kicker{font-family:"IBM Plex Mono",monospace; font-size:14px; letter-spacing:.18em; text-transform:uppercase; color:var(--accent); margin-bottom:22px}
-  .hero-name{font-family:"Fraunces",serif; font-weight:600; font-size:clamp(58px,12vw,168px); line-height:.92; letter-spacing:-.025em}
+  .hero-name{font-family:"Source Serif 4",Georgia,serif; font-weight:600; font-size:clamp(58px,12vw,168px); line-height:.92; letter-spacing:-.025em}
   .hero-name .it{font-style:italic; font-weight:500}
-  .hero-tag{font-family:"Fraunces",serif; font-size:clamp(20px,3.2vw,34px); font-weight:400; font-style:italic; color:var(--ink-soft); margin-top:28px; max-width:20ch; line-height:1.25}
+  .hero-tag{font-family:"Source Serif 4",Georgia,serif; font-size:clamp(20px,3.2vw,34px); font-weight:400; font-style:italic; color:var(--ink-soft); margin-top:28px; max-width:20ch; line-height:1.25}
   .hero-meta{display:flex; flex-wrap:wrap; gap:14px 26px; margin-top:42px; align-items:center; font-family:"IBM Plex Mono",monospace; font-size:13px; letter-spacing:.02em; color:var(--muted)}
   .hero-cta{display:flex; gap:14px; margin-top:40px; flex-wrap:wrap}
   .btn{display:inline-flex; align-items:center; gap:9px; padding:13px 24px; border-radius:40px; font-weight:600; font-size:15px; transition:.3s var(--ease); border:1.5px solid var(--ink); cursor:pointer}
@@ -82,21 +82,21 @@
   .btn .ar{transition:transform .3s var(--ease)}
   .btn:hover .ar{transform:translate(3px,-3px)}
   .marquee{margin-top:74px; border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:18px 0; overflow:hidden; white-space:nowrap; -webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent); mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
-  .marquee-track{display:inline-flex; gap:50px; animation:scrollx 26s linear infinite; font-family:"Fraunces",serif; font-style:italic; font-size:26px; color:var(--ink-soft); will-change:transform}
+  .marquee-track{display:inline-flex; gap:50px; animation:scrollx 26s linear infinite; font-family:"Source Serif 4",Georgia,serif; font-style:italic; font-size:26px; color:var(--ink-soft); will-change:transform}
   .marquee-track b{color:var(--accent); font-style:normal; font-weight:600}
   @keyframes scrollx{to{transform:translateX(-50%)}}
 
   /* ABOUT */
   .about-grid{display:grid; grid-template-columns:1.5fr 1fr; gap:64px; align-items:start}
   @media(max-width:880px){.about-grid{grid-template-columns:1fr; gap:48px}}
-  .about-lead{font-family:"Fraunces",serif; font-size:clamp(26px,3.6vw,40px); line-height:1.32; font-weight:400; letter-spacing:-.01em}
+  .about-lead{font-family:"Source Serif 4",Georgia,serif; font-size:clamp(26px,3.6vw,40px); line-height:1.32; font-weight:400; letter-spacing:-.01em}
   .about-lead b{font-weight:600; color:var(--accent); font-style:italic}
   .about-body{color:var(--ink-soft); font-size:17px}
   .about-body p+p{margin-top:18px}
   .stats{display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:14px; overflow:hidden; margin-top:64px}
   @media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}}
   .stat{background:var(--bg); padding:30px 24px}
-  .stat .v{font-family:"Fraunces",serif; font-size:clamp(34px,5vw,52px); font-weight:600; letter-spacing:-.02em; line-height:1}
+  .stat .v{font-family:"Source Serif 4",Georgia,serif; font-size:clamp(34px,5vw,52px); font-weight:600; letter-spacing:-.02em; line-height:1}
   .stat .v .suf{color:var(--accent)}
   .stat .l{font-family:"IBM Plex Mono",monospace; font-size:11.5px; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); margin-top:12px; line-height:1.4}
 
@@ -105,7 +105,7 @@
   .xp-row{border-bottom:1px solid var(--line); padding:30px 0; cursor:pointer; transition:padding .35s var(--ease); position:relative}
   .xp-head{display:grid; grid-template-columns:1fr auto auto; gap:24px; align-items:baseline}
   @media(max-width:640px){.xp-head{grid-template-columns:1fr; gap:6px}}
-  .xp-co{font-family:"Fraunces",serif; font-size:clamp(24px,3.3vw,38px); font-weight:600; letter-spacing:-.015em; transition:color .3s}
+  .xp-co{font-family:"Source Serif 4",Georgia,serif; font-size:clamp(24px,3.3vw,38px); font-weight:600; letter-spacing:-.015em; transition:color .3s}
   .xp-role{color:var(--ink-soft); font-size:16px}
   .xp-date{font-family:"IBM Plex Mono",monospace; font-size:12.5px; color:var(--muted); white-space:nowrap}
   .xp-row:hover{padding-left:14px}
@@ -129,7 +129,7 @@
   .tl-dot{position:absolute; left:3px; top:3px; width:18px; height:18px; border-radius:50%; background:var(--bg); border:2px solid var(--line); transition:.4s var(--ease)}
   .tl-item.lit .tl-dot{border-color:var(--accent); background:var(--accent); box-shadow:0 0 0 5px rgba(214,69,47,.13)}
   .tl-year{font-family:"IBM Plex Mono",monospace; font-size:13px; color:var(--accent); font-weight:600; letter-spacing:.04em}
-  .tl-co{font-family:"Fraunces",serif; font-size:24px; font-weight:600; margin-top:4px; letter-spacing:-.01em}
+  .tl-co{font-family:"Source Serif 4",Georgia,serif; font-size:24px; font-weight:600; margin-top:4px; letter-spacing:-.01em}
   .tl-desc{color:var(--ink-soft); font-size:15.5px; margin-top:3px}
 
   /* PROJECTS */
@@ -140,7 +140,7 @@
   .proj:hover{transform:translateY(-5px)}
   .proj:hover::after{opacity:1}
   .proj-top{display:flex; justify-content:space-between; align-items:flex-start; gap:12px; margin-bottom:18px}
-  .proj-name{font-family:"Fraunces",serif; font-size:27px; font-weight:600; letter-spacing:-.01em}
+  .proj-name{font-family:"Source Serif 4",Georgia,serif; font-size:27px; font-weight:600; letter-spacing:-.01em}
   .proj-badge{font-family:"IBM Plex Mono",monospace; font-size:10px; text-transform:uppercase; letter-spacing:.05em; color:var(--accent); border:1px solid var(--accent); border-radius:30px; padding:4px 10px; white-space:nowrap}
   .proj-desc{color:var(--ink-soft); font-size:15.5px; line-height:1.55}
   .proj-stack{display:flex; flex-wrap:wrap; gap:8px; margin-top:20px}
@@ -159,7 +159,7 @@
   .rm.now .rm-when{color:var(--accent)}
   .rm-pulse{width:8px; height:8px; border-radius:50%; background:var(--accent); animation:pulse 1.8s infinite}
   @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(214,69,47,.5)}70%{box-shadow:0 0 0 9px rgba(214,69,47,0)}100%{box-shadow:0 0 0 0 rgba(214,69,47,0)}}
-  .rm-title{font-family:"Fraunces",serif; font-size:21px; font-weight:600; margin:14px 0 10px; letter-spacing:-.01em}
+  .rm-title{font-family:"Source Serif 4",Georgia,serif; font-size:21px; font-weight:600; margin:14px 0 10px; letter-spacing:-.01em}
   .rm-list{list-style:none; display:grid; gap:9px}
   .rm-list li{position:relative; padding-left:18px; color:var(--ink-soft); font-size:14.5px; line-height:1.5}
   .rm-list li::before{content:"›"; position:absolute; left:0; color:var(--accent); font-weight:700}
@@ -179,14 +179,14 @@
   @media(max-width:640px){.ach{grid-template-columns:auto 1fr; gap:16px}}
   .ach-year{font-family:"IBM Plex Mono",monospace; font-size:13px; color:var(--accent); font-weight:600}
   .ach-txt{font-size:17px}
-  .ach-txt b{font-family:"Fraunces",serif; font-weight:600; font-size:19px}
+  .ach-txt b{font-family:"Source Serif 4",Georgia,serif; font-weight:600; font-size:19px}
   .ach-cert{font-family:"IBM Plex Mono",monospace; font-size:11px; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); border:1px solid var(--line); border-radius:30px; padding:5px 12px; transition:.3s; white-space:nowrap}
   @media(max-width:640px){.ach-cert{grid-column:2; justify-self:start; margin-top:6px}}
   .ach-cert:hover{border-color:var(--accent); color:var(--accent)}
 
   /* CONTACT */
   #contact{padding-bottom:80px}
-  .ct-big{font-family:"Fraunces",serif; font-size:clamp(40px,8vw,104px); font-weight:600; line-height:.98; letter-spacing:-.025em}
+  .ct-big{font-family:"Source Serif 4",Georgia,serif; font-size:clamp(40px,8vw,104px); font-weight:600; line-height:.98; letter-spacing:-.025em}
   .ct-big a{position:relative; white-space:nowrap}
   .ct-big a::after{content:""; position:absolute; left:0; bottom:.06em; width:100%; height:3px; background:var(--accent); transform:scaleX(0); transform-origin:left; transition:transform .45s var(--ease)}
   .ct-big a:hover::after{transform:scaleX(1)}
@@ -252,14 +252,14 @@
     <div class="seclabel reveal"><span class="num">01</span><span class="ttl" data-i18n="nav_about">About</span><span class="ln"></span></div>
     <div class="about-grid">
       <p class="about-lead reveal">
-        <span class="en">A <b>builder &amp; problem-solver</b> who trusts data over opinions — turning ambiguous problems into structured decisions and measurable impact. Product, strategy, and a SaaS built from zero.</span>
-        <span class="ru">Я <b>создаю продукты и решаю задачи</b>, опираясь на данные, а не мнения — превращаю неоднозначные проблемы в структурные решения и измеримый результат. Продукт, стратегия и SaaS с нуля.</span>
+        <span class="en">A <b>builder &amp; problem-solver</b> who trusts data over opinions — turning ambiguous problems into structured decisions and measurable impact. Product, strategy, and a marketplace built from zero.</span>
+        <span class="ru">Я <b>создаю продукты и решаю задачи</b>, опираясь на данные, а не мнения — превращаю неоднозначные проблемы в структурные решения и измеримый результат. Продукт, стратегия и маркетплейс с нуля.</span>
       </p>
       <div class="about-body reveal" data-d="1">
-        <p class="en">At <b style="color:var(--ink)">Tinkoff</b> I ran controlled experiments on credit-card flows. At <b style="color:var(--ink)">Title.</b> I took an AI university platform from concept to launch. As founder of <b style="color:var(--ink)">Logora</b>, I built a creator-monetization SaaS end to end.</p>
+        <p class="en">At <b style="color:var(--ink)">Tinkoff</b> I ran controlled experiments on credit-card flows. At <b style="color:var(--ink)">Title.</b> I took an AI university platform from concept to launch. As founder of <b style="color:var(--ink)">Logora</b>, I built a creator-monetization marketplace end to end.</p>
         <p class="en">HSE Computer Science graduate, now pursuing an MSc at <b style="color:var(--ink)">TU Munich</b> (Data in Society) and HSE (AI).</p>
         <p class="en">My focus now: <b style="color:var(--ink)">digital transformation and AI governance</b> (EU AI Act, data policy) — bridging engineering, business and strategy, whether in product or consulting.</p>
-        <p class="ru">В <b style="color:var(--ink)">Tinkoff</b> я вёл контролируемые эксперименты на флоу кредитных карт. В <b style="color:var(--ink)">Title.</b> довёл AI-платформу для вузов от концепции до запуска. Как основатель <b style="color:var(--ink)">Logora</b> построил SaaS для монетизации криейторов от и до.</p>
+        <p class="ru">В <b style="color:var(--ink)">Tinkoff</b> я вёл контролируемые эксперименты на флоу кредитных карт. В <b style="color:var(--ink)">Title.</b> довёл AI-платформу для вузов от концепции до запуска. Как основатель <b style="color:var(--ink)">Logora</b> построил маркетплейс для монетизации криейторов от и до.</p>
         <p class="ru">Выпускник ФКН ВШЭ (Computer Science), сейчас магистратура в <b style="color:var(--ink)">TU Munich</b> (Data in Society) и ВШЭ (AI).</p>
         <p class="ru">Сейчас фокус: <b style="color:var(--ink)">цифровая трансформация и AI-governance</b> (EU AI Act, политика данных) — соединяю инженерию, бизнес и стратегию, в продукте или консалтинге.</p>
       </div>
@@ -346,9 +346,9 @@ const XP=[
   {co:"Title.",tag:"EdTech · AI",role:{en:"Product Manager / Business Analyst",ru:"Product Manager / Бизнес-аналитик"},date:{en:"Aug 2024 — Sep 2025",ru:"Авг 2024 — Сен 2025"},
    b:{en:["Led an AI university platform from concept to MVP in *4 months* with a team of 10","Automated academic workflows → *~40% reduction in operational costs*","Key project: *AI Lingua* — NLP English-proficiency assessment for HSE, featured in TASS","Drove product to B2B negotiations; nominated for an industry innovation award"],
        ru:["Возглавил AI-платформу для вузов: от концепции до MVP за *4 месяца*, команда 10 человек","Автоматизировал академические процессы → *~40% сокращение операционных затрат*","Ключевой проект: *AI Lingua* — NLP-оценка английского для ВШЭ, упомянута в ТАСС","Довёл продукт до B2B-переговоров; номинация на отраслевую премию за инновации"]}},
-  {co:"Logora",tag:"Founder · SaaS",role:{en:"Founder & Growth Product Manager",ru:"Основатель & Growth PM"},date:{en:"Apr 2024 — Apr 2026",ru:"Апр 2024 — Апр 2026"},
-   b:{en:["Built a creator-monetization SaaS (sessions, booking, payments, payouts) from *0 → 1*","Grew a pre-launch waitlist to *100+ creators* through outreach & user interviews","Finalist, \"Best Entrepreneurial Project\" — HSE FCS Young Entrepreneur Scholarship 2025","Ran B2B talks with universities, advancing pilot integration agreements"],
-       ru:["Построил SaaS для монетизации криейторов (сессии, бронь, платежи, выплаты) с *0 → 1*","Собрал вейтлист *100+ криейторов* через аутрич и интервью с пользователями","Финалист «Лучший предпринимательский проект» — Стипендия молодого предпринимателя ФКН ВШЭ 2025","Вёл B2B-переговоры с вузами, продвигал пилотные интеграции"]}},
+  {co:"Logora",tag:"Founder · Marketplace",role:{en:"Founder & Growth Product Manager",ru:"Основатель & Growth PM"},date:{en:"Apr 2024 — Apr 2026",ru:"Апр 2024 — Апр 2026"},
+   b:{en:["Built a creator-monetization marketplace (sessions, booking, payments, payouts) from *0 → 1*","Grew a pre-launch waitlist to *100+ creators* through outreach & user interviews","Finalist, \"Best Entrepreneurial Project\" — HSE FCS Young Entrepreneur Scholarship 2025","Ran B2B talks with universities, advancing pilot integration agreements"],
+       ru:["Построил маркетплейс для монетизации криейторов (сессии, бронь, платежи, выплаты) с *0 → 1*","Собрал вейтлист *100+ криейторов* через аутрич и интервью с пользователями","Финалист «Лучший предпринимательский проект» — Стипендия молодого предпринимателя ФКН ВШЭ 2025","Вёл B2B-переговоры с вузами, продвигал пилотные интеграции"]}},
   {co:"HSE",tag:"Academia",role:{en:"Research Assistant — Data Analysis",ru:"Учебный ассистент — Анализ данных"},date:{en:"Sep 2024 — Jan 2025",ru:"Сен 2024 — Янв 2025"},
    b:{en:["Supported students in mathematical methods of data analysis in Python","Ran individual & group consultations; evaluated progress with structured feedback"],
        ru:["Помогал студентам с математическими методами анализа данных на Python","Вёл индивидуальные и групповые консультации; оценивал прогресс с обратной связью"]}},
@@ -368,15 +368,15 @@ const XP=[
 const TL=[
   {year:"2023",co:"Apelsin",d:{en:"First step — iOS development",ru:"Первый шаг — iOS-разработка"}},
   {year:"2024",co:"NLMK → Tinkoff",d:{en:"Into data: ML models & A/B testing",ru:"В данные: ML-модели и A/B-тесты"}},
-  {year:"2024",co:"Title. + Logora",d:{en:"Becoming a PM — and founding my own SaaS",ru:"Становлюсь продактом — и основываю свой SaaS"}},
+  {year:"2024",co:"Title. + Logora",d:{en:"Becoming a PM — and founding my own marketplace",ru:"Становлюсь продактом — и основываю свой маркетплейс"}},
   {year:"2025",co:"Tinkoff — Technical PM",d:{en:"Product at scale: experiments on credit-card flows",ru:"Продукт на масштабе: эксперименты на флоу кредиток"}},
   {year:"2026",co:"TU Munich",d:{en:"MSc Data in Society — relocation to Germany",ru:"MSc Data in Society — переезд в Германию"}}
 ];
 const PROJ=[
-  {n:"Logora",badge:{en:"SaaS · Founder",ru:"SaaS · Фаундер"},d:{en:"Creator-monetization platform — paid sessions, booking, payments and payouts. Built 0→1, 100+ waitlist, HSE finalist 2025.",ru:"Платформа монетизации криейторов — платные сессии, бронь, платежи и выплаты. Построена с 0→1, 100+ вейтлист, финалист ВШЭ 2025."},stack:["Vue.js","Django","Python"],link:null},
+  {n:"Logora",badge:{en:"Marketplace · Founder",ru:"Маркетплейс · Фаундер"},d:{en:"Creator-monetization platform — paid sessions, booking, payments and payouts. Built 0→1, 100+ waitlist, HSE finalist 2025.",ru:"Платформа монетизации криейторов — платные сессии, бронь, платежи и выплаты. Построена с 0→1, 100+ вейтлист, финалист ВШЭ 2025."},stack:["Vue.js","Django","Python"],link:null},
   {n:"AI Lingua",badge:{en:"NLP · In TASS",ru:"NLP · В ТАСС"},d:{en:"NLP system for automated English-proficiency assessment, built at Title. for HSE. Evaluates writing & speech; featured in TASS (2024).",ru:"NLP-система автоматической оценки уровня английского, сделана в Title. для ВШЭ. Оценивает письмо и речь; упомянута в ТАСС (2024)."},stack:["NLP","Product","Analytics"],link:"https://tass.ru/obschestvo/22004259",linkt:{en:"Read in TASS",ru:"Читать в ТАСС"}},
   {n:"Vocab Cards",badge:{en:"Pet · AI",ru:"Pet · AI"},d:{en:"Turns handwritten vocabulary photos into structured flashcards via Claude API — straight into Obsidian and Anki.",ru:"Превращает фото рукописных слов в структурированные карточки через Claude API — прямо в Obsidian и Anki."},stack:["Python","Claude API","Obsidian"],link:null},
-  {n:"YouTube",badge:{en:"Content",ru:"Контент"},d:{en:"A channel on building SaaS, careers in tech, and the founder path — honest, with real numbers, no hype.",ru:"Канал о том, как строю SaaS, о карьере в IT и пути фаундера — честно, с цифрами, без инфоцыганства."},stack:["SaaS","Career","Founder"],link:null}
+  {n:"YouTube",badge:{en:"Content",ru:"Контент"},d:{en:"A channel on building products, careers in tech, and the founder path — honest, with real numbers, no hype.",ru:"Канал о том, как строю продукты, о карьере в IT и пути фаундера — честно, с цифрами, без инфоцыганства."},stack:["Product","Career","Founder"],link:null}
 ];
 const RM=[
   {when:{en:"Now · 2026",ru:"Сейчас · 2026"},now:true,t:{en:"Logora & Audience",ru:"Logora и аудитория"},l:{en:["First paying users & B2B pilots","Launch YouTube consistently","First paid consultations"],ru:["Первые платящие и B2B-пилоты","Регулярный запуск YouTube","Первые платные консультации"]}},
